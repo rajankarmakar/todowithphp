@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.regitration-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("inc/upload/app_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+    padding-top: 20px;
+    align-self: flex-start;
+}
+.login img{
+    max-width: 400px;
+    height: auto;
+    align-self: center;
+    cursor: pointer;
+}
+h1.title{
+    color: #7f7f7f;
+    font-size: 70px;
+    text-transform: capitalize;
+    text-align: center;
+}
+p.description{
+    text-align: center;
+    padding-top: 10px;
+    color: #7f7f7f;
+    font-weight: bold;
+    font-size: 30px;
+}
