@@ -12,7 +12,7 @@ class Config{
         $this->gClient->setClientId($this->clientId);
         $this->gClient->setClientSecret($this->clientSecret);
         $this->gClient->setApplicationName("Simple ToDo App With PHP");
-        $this->gClient->setRedirectUri("http://localhost/todowithphp/GoogleAPI/g-callback.php");
+        $this->gClient->setRedirectUri("http://todowithphp.herokuapp.com/GoogleAPI/g-callback.php");
         $this->gClient->addScope("https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email");
         $this->loginUrl = $this->gClient->createAuthUrl();
     }
