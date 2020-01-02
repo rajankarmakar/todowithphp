@@ -1,9 +1,9 @@
 <?php
 class Database{
-    const HOST = "localhost";
-    const DB_NAME = "task";
-    const DB_USER = "root";
-    const DB_PASSWORD = "";
+    const HOST = "us-cdbr-iron-east-05.cleardb.net";
+    const DB_NAME = "heroku_8975c2f17eb03d4";
+    const DB_USER = "b6c7e56cf401ae";
+    const DB_PASSWORD = "bbd9efdf";
     private $mySQLQueryString = "mysql:host=".self::HOST.";dbname=".self::DB_NAME;
     public $conn;
     public $task, $date;
