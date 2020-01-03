@@ -11,7 +11,8 @@ include "../admin/class.database.php";
 
             $oAuth = new Google_Service_Oauth2($myCon->gClient);
             $userData = $oAuth->userinfo_v2_me->get();
-
+            $_SESSION['name'] = $userData['name'];
+            $_SESSION['picture'] = $userData['picture'];
             if(isset($_SESSION['access-token'])) {
                 $userName = $userData['name'];
                 $email = $userData['email'];
