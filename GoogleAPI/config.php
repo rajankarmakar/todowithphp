@@ -1,8 +1,8 @@
 <?php
 include('vendor/autoload.php');
 class Config{
-    private $clientId = "1024149819773-mddr44g1lneer57s571isd5lm9tc792b.apps.googleusercontent.com";
-    private $clientSecret = "2oM3QEzYARAlRPIyrATUTyeN";
+    private $clientId = "747830735251-f06bgqu265cm14q52iq4g21l0iaks3gs.apps.googleusercontent.com";
+    private $clientSecret = "1Dc85pHhSaoEIMNYwKgDrlUf";
     private $loginUrl;
     public $gClient;
 
