@@ -2,10 +2,7 @@
 session_start();
 include "config.php";
 include "../admin/class.database.php";
-class HandleGoogleRequest {
-    private $email;
 
-    public function showDashBoard(){
         if(isset($_GET['code'])) {
             $myCon = new Config();
             $token = $myCon->gClient->fetchAccessTokenWithAuthCode($_GET['code']);
@@ -38,10 +35,6 @@ class HandleGoogleRequest {
             }
 
 
-    }
 
-
-}
 new Config();
-$obj = new HandleGoogleRequest();
-$obj->showDashBoard();
+
