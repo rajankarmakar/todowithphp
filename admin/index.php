@@ -23,8 +23,8 @@ if(!isset($_SESSION['access-token'])){
                 <h1 class="text-success text-center"> Simple TODO App</h1>
                 <h3 class="text-success text-center"> <?php $obj->insertTodo(); ?> </h3>
                 <div class="text-center mt-5 mb-5">
-                    <img class="rounded mx-auto d-block" src="<?php $_SESSION['picture']; ?>" alt="<?php $_SESSION['name']; ?>">
-                    <h1 class="text-success text-center"> Hello! <?php $_SESSION['name']; ?> </h1>
+                    <img class="rounded mx-auto d-block" src="<?php echo $_SESSION['picture']; ?>" alt="<?php echo $_SESSION['name']; ?>">
+                    <h1 class="text-success text-center"> Hello! <?php echo $_SESSION['name']; ?> </h1>
                     <form method="GET" action="logout.php">
                         <button class="btn btn-info text-center" type="submit" name="logout" value="true"> Logout </button>
                     </form>
