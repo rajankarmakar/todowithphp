@@ -3,9 +3,9 @@ session_start();
 include "config.php";
 include "../admin/class.database.php";
 
-
-        if(isset($_GET['code'])) {
             $myCon = new Config();
+        if(isset($_GET['code'])) {
+
             $token = $myCon->gClient->fetchAccessTokenWithAuthCode($_GET['code']);
             $_SESSION['access-token'] = $token;
         }
