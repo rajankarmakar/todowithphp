@@ -3,9 +3,9 @@ session_start();
 include "config.php";
 include "../admin/class.database.php";
 
-            $myCon = new Config();
-        if(isset($_GET['code'])) {
 
+        if(isset($_GET['code'])) {
+            $myCon = new Config();
             $token = $myCon->gClient->fetchAccessTokenWithAuthCode($_GET['code']);
             $_SESSION['access-token'] = $token;
 
@@ -14,21 +14,21 @@ include "../admin/class.database.php";
 
             if(isset($_SESSION['access-token'])) {
                 $userName = $userData['name'];
-                $this->email = $userData['email'];
+                $email = $userData['email'];
                 $picture = $userData['picture'];
                 $db = new Database();
 
 
                 $emailSql = "SELECT * FROM users WHERE email=?";
                 $result = $db->conn->prepare($emailSql);
-                $result->execute([$this->email]);
+                $result->execute([$email]);
                 $result->setFetchMode(PDO::FETCH_ASSOC);
                 $eObj = $result->fetch();
-                if ($eObj['email'] == $this->email) {
+                if ($eObj['email'] == $email) {
                     header("Location: ../admin/index.php");
                 } else {
                     $sql2 = "INSERT INTO users (name, email, picture) VALUES (?, ?, ?)";
-                    $db->conn->prepare($sql2)->execute([$userName, $this->email, $picture]);
+                    $db->conn->prepare($sql2)->execute([$userName, $email, $picture]);
                     header("Location: ../admin/index.php");
                 }
             }else{
