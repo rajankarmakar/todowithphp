@@ -2,6 +2,7 @@
 session_start();
 include "config.php";
 include "../admin/class.database.php";
+new Config();
 
         if(isset($_GET['code'])) {
             $myCon = new Config();
@@ -36,5 +37,5 @@ include "../admin/class.database.php";
 
 
 
-new Config();
+
 
