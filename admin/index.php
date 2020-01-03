@@ -5,6 +5,9 @@ if(!isset($_SESSION['access-token'])){
     header("Location: ../index.php");
     die();
 }
+echo "<pre>";
+print_r($_SESSION['picture']);
+echo "</pre>";
 ?>
 <!doctype html>
 <html lang="en">
