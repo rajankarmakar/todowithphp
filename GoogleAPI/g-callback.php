@@ -5,11 +5,10 @@ include "../admin/class.database.php";
 
             $myCon = new Config();
         if(isset($_GET['code'])) {
-            echo"Welcome to the site";
-die();
+
             $token = $myCon->gClient->fetchAccessTokenWithAuthCode($_GET['code']);
             $_SESSION['access-token'] = $token;
-        }
+
             $oAuth = new Google_Service_Oauth2($myCon->gClient);
             $userData = $oAuth->userinfo_v2_me->get();
 
@@ -35,7 +34,7 @@ die();
             }else{
                 header("Location: ../index.php");
             }
-
+        }
 
 
 
