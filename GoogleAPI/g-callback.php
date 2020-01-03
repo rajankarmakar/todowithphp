@@ -4,10 +4,6 @@ include "config.php";
 include "../admin/class.database.php";
 class HandleGoogleRequest {
     private $email;
-    public function __construct()
-    {
-        $this->showDashBoard();
-    }
 
     public function showDashBoard(){
         if(isset($_GET['code'])) {
