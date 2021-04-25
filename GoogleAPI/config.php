@@ -17,6 +17,11 @@ class Config{
         $this->loginUrl = $this->gClient->createAuthUrl();
     }
 
+    /**
+     * Printing Google login url.
+     *
+     * @return void
+     */
     public function googleLoginUrl(){
         echo $this->loginUrl;
     }
